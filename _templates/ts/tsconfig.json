@@ -1,0 +1,19 @@
+{
+  "extends": "../../config/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "exclude": [
+    "dist/**/*"
+  ],
+  "typeRoots": [
+    "../../node_modules/@types",
+    "node_modules/@types"
+  ]
+}

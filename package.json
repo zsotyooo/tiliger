@@ -1,0 +1,20 @@
+{
+  "name": "tiliger",
+  "version": "0.0.0",
+  "description": "command tool for reusable project setups",
+  "bin": "cli.js",
+  "main": "index.js",
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.1.0",
+    "log-symbols": "^3.0.0",
+    "prettier": "^1.18.2",
+    "replace-in-file": "^4.1.3",
+    "simple-git": "^1.126.0",
+    "yargs": "^14.0.0"
+  },
+  "scripts": {
+    "prettier": "prettier --config .prettierrc --write '**/*.{ts,js}'",
+    "create:package": "node scripts/gen-package.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "<% PACKAGE_NAME %>-wrapper",
+  "private": true,
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2"
+  },
+  "scripts": {
+    "dev": "lerna run --parallel --scope @<% PACKAGE_NAME %>/* dev",
+    "build": "lerna --parallel --scope @<% PACKAGE_NAME %>/* build",
+    "prettier": "prettier --config .prettierrc --write '**/*.{ts,js}'"
+  }
+}
