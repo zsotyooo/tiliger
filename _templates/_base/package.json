@@ -7,8 +7,11 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "dev": "lerna run --parallel --scope @<% PACKAGE_NAME %>/* dev",
-    "build": "lerna --parallel --scope @<% PACKAGE_NAME %>/* build",
+    "boot": "lerna bootstrap",
+    "dev": "lerna run --parallel dev",
+    "test": "lerna run --parallel test",
+    "lint": "lerna run --parallel lint:fix",
+    "build": "lerna --parallel build",
     "prettier": "prettier --config .prettierrc --write '**/*.{ts,js}'"
   }
 }

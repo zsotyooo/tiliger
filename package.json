@@ -14,8 +14,7 @@
     "yargs": "^14.0.0"
   },
   "scripts": {
-    "prettier": "prettier --config .prettierrc --write '**/*.{ts,js}'",
-    "create:package": "node scripts/gen-package.js"
+    "prettier": "prettier --config .prettierrc --write '**/*.{ts,js}'"
   },
   "repository": {
     "type": "git",

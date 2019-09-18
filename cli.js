@@ -33,7 +33,7 @@ yargs
     }
   })
   .command({
-    command: 'init [folder]',
+    command: 'create [folder]',
     desc: 'create a project from a predefined template',
     builder: y =>
       y.options({
