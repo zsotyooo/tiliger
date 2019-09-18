@@ -1,6 +1,6 @@
 {
   "name": "tiliger",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "command tool for reusable project setups",
   "bin": "cli.js",
   "main": "index.js",
@@ -21,7 +21,15 @@
     "type": "git",
     "url": "git+https://github.com/zsotyooo/tiliger.git"
   },
-  "keywords": ["template", "tiliger", "command", "line", "lerna", "multi", "multi-package"],
+  "keywords": [
+    "template",
+    "tiliger",
+    "command",
+    "line",
+    "lerna",
+    "multi",
+    "multi-package"
+  ],
   "author": "Zsolt Molnár <zsotyooo@gmail.com>",
   "license": "MIT",
   "bugs": {
