@@ -7,7 +7,7 @@ A command line tool to create predefined packages based on templates.
 
 It's designed to create monorepos, with inherited configuration.
 
-The idea behind it that in a monorepo many times you have very similar packages. With the help of tiliger you can spawn a new package. Also, it's possible to have you own setups, and reuse them later (_COMING LATER_).
+The idea behind it that in a monorepo many times you have very similar packages. With the help of tiliger you can spawn a new package. Also, it's possible to have your own setups, and reuse them later (_COMING LATER_).
 
 Tiliger uses [lerna](https://github.com/lerna/lerna) to manage the packages.
 
