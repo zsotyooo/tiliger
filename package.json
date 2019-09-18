@@ -16,5 +16,16 @@
   "scripts": {
     "prettier": "prettier --config .prettierrc --write '**/*.{ts,js}'",
     "create:package": "node scripts/gen-package.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsotyooo/tiliger.git"
+  },
+  "keywords": ["template", "tiliger", "command", "line", "lerna", "multi", "multi-package"],
+  "author": "Zsolt Molnár <zsotyooo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsotyooo/tiliger/issues"
+  },
+  "homepage": "https://github.com/zsotyooo/tiliger#readme"
 }
