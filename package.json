@@ -1,6 +1,6 @@
 {
   "name": "tiliger",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "command tool for reusable project setups",
   "bin": "cli.js",
   "main": "index.js",
