@@ -3,11 +3,11 @@ const { getGitUrl } = require('../utils/index');
 
 const getConfig = async (path, conf) =>
   new Promise((resolve, reject) => {
-    git(path).raw(['config', '--get', conf], (err, res) => {
+    git(path).raw(['config', '--global', '--get', conf], (err, res) => {
       if (!err) {
         resolve(res.trim());
       } else {
-        reject(err);
+        reject('No git configured!');
       }
     });
   });

@@ -1,5 +1,5 @@
 {
-  "name": "<% PACKAGE_NAME %>-wrapper",
+  "name": "<% PACKAGE_NAME %>-monorepo",
   "private": true,
   "devDependencies": {
     "jest": "^24.9.0",

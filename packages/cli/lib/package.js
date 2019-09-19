@@ -21,13 +21,15 @@ const getPackage = (
       : path.join(getDirOrPwd(dir), 'packages', packageName)
 });
 
-const copyPackage = (pkg, verbose = false) => {
+const createPackageFolder = (pkg) => {
   if (fs.pathExistsSync(pkg.destDir())) {
     throw new Error(`Path (${pkg.destDir()}) already exists!`);
   }
 
   fs.ensureDirSync(pkg.destDir());
+}
 
+const copyPackage = (pkg, verbose = false) => {
   fs.copySync(pkg.srcDir(), pkg.destDir(), {
     overwrite: false,
     errorOnExist: true
@@ -43,5 +45,6 @@ const copyPackage = (pkg, verbose = false) => {
 
 module.exports = {
   getPackage,
+  createPackageFolder,
   copyPackage
 };
