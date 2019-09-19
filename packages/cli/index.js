@@ -3,7 +3,6 @@ const logSymbols = require('log-symbols');
 const git = require('./lib/git');
 const replace = require('./lib/replace');
 const { getPackage, createPackageFolder, copyPackage } = require('./lib/package');
-const { getDirOrPwd } = require('./utils/index');
 
 const createPackage = async (
   name,
