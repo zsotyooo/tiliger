@@ -1,0 +1,74 @@
+{
+  "name": "@tiliger/rollup",
+  "version": "0.1.0",
+  "description": "tiliger rollup related functionality",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint -c .eslintrc.js '**/*.ts'",
+    "lint:fix": "eslint --fix -c .eslintrc.js '**/*.ts'",
+    "pretty": "prettier-eslint --write --config .prettierrc \"**/*.ts\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "repository": {
+    "directory": "packages/rollup",
+    "type": "git",
+    "url": "git+https://github.com/zsotyooo/tiliger.git"
+  },
+  "keywords": [],
+  "author": "Zsolt Molnár <zsotyooo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsotyooo/tiliger/issues"
+  },
+  "homepage": "https://github.com/zsotyooo/tiliger#readme",
+  "devDependencies": {
+    "@types/dotenv-flow": "^3.0.0",
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^24.0.18",
+    "@types/rollup-plugin-json": "^3.0.2",
+    "@types/underscore": "^1.9.3",
+    "@typescript-eslint/eslint-plugin": "2.2.0",
+    "@typescript-eslint/eslint-plugin-tslint": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
+    "cross-env": "^5.2.1",
+    "eslint": "5.16.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^23.0.1",
+    "jest-mock-console": "^1.0.0",
+    "jest-runner-tsc": "^1.5.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "source-map-loader": "^0.2.4",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^6.1.0",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.20.0"
+  },
+  "dependencies": {
+    "@tiliger/config": "*",
+    "dom-storage": "^2.1.0",
+    "dotenv-flow": "^3.1.0",
+    "eslint-config-airbnb-typescript": "^5.0.0",
+    "fs-extra": "^8.1.0",
+    "rollup": "^1.21.2",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.24.2",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.3",
+    "underscore": "^1.9.1"
+  },
+  "tiliger": {
+    "rollup": {
+      "external": [
+        "path"
+      ]
+    }
+  }
+}

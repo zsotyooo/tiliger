@@ -1,0 +1,40 @@
+{
+  "name": "@tiliger/config",
+  "version": "0.1.0",
+  "description": "base cofinguration files",
+  "scripts": {
+    "lint": "exit 0",
+    "pretty": "exit 0",
+    "test": "exit 0",
+    "build": "exit 0"
+  },
+  "repository": {
+    "directory": "packages/config",
+    "type": "git",
+    "url": "git+https://github.com/zsotyooo/tiliger.git"
+  },
+  "keywords": [],
+  "author": "Zsolt Molnár <zsotyooo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zsotyooo/tiliger/issues"
+  },
+  "homepage": "https://github.com/zsotyooo/tiliger#readme",
+  "dependencies": {
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-typescript": "^5.0.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^23.0.1",
+    "jest-mock-console": "^1.0.0",
+    "jest-runner-tsc": "^1.5.1",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "source-map-loader": "^0.2.4",
+    "ts-jest": "^23.10.5",
+    "ts-loader": "^6.1.0",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.20.0"
+  }
+}
