@@ -12,6 +12,9 @@
     "build": "rollup -c",
     "dev": "rollup -c -w"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "directory": "packages/rollup",
     "type": "git",

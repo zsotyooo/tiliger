@@ -1,20 +1,33 @@
 {
-  "extends": "@tiliger/config/tsconfig.base.json",
+  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "dist",
+    "declaration": true,
+    "importHelpers": true,
+    "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "types": [
       "node",
       "jest"
-    ]
+    ],
+    "lib": [
+      "es5",
+      "dom",
+      "es2015.promise",
+      "es2015.symbol",
+      "es2015.iterable",
+      "es2015.collection",
+      "es2015.symbol.wellknown",
+      "es2015.core",
+      "es2017.object"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5"
   },
   "exclude": [
     "dist/**/*",
-    "**/__MOCK/**/*"
-  ],
-  "typeRoots": [
-    "../../node_modules/@types",
-    "node_modules/@types"
+    "**/__fixtures__/**/*"
   ]
 }

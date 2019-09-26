@@ -16,11 +16,10 @@ function fileExistsWithType(folder: string, fn: string, type: string) {
   return fileExists(folder, getFilenameWithType(fn, type));
 }
 
-/* istanbul ignore next */
-function getJsFilename(fn: string) {
+export function getFilenameWithNewExtension(fn: string, newExt: string) {
   const fnArr = fn.split('.');
   fnArr.pop();
-  return [...fnArr, 'js'].join('.');
+  return [...fnArr, newExt].join('.');
 }
 
 export interface Files {
@@ -46,7 +45,7 @@ const getFiles = (
     : inputFile;
   return {
     input,
-    output: outputFile || `dist/${getJsFilename(inputFile)}`,
+    output: outputFile || `dist/${getFilenameWithNewExtension(inputFile, 'js')}`,
   };
 };
 

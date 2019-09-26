@@ -1,9 +1,7 @@
 import path from 'path';
 import createConfig from '.';
-// import PluginService from '../plugin/PluginService';
-// jest.mock('../plugin/PluginService');
 
-const testFolder = path.resolve(__dirname, '..', '__MOCK__');
+const testFolder = path.resolve(__dirname, '../../../../__fixtures__/files');
 
 describe('createConfig', () => {
   describe('config for node cjs', () => {
@@ -195,6 +193,54 @@ describe('createConfig', () => {
           sourcemap: true,
         });
       });
+    });
+  });
+  describe('config for bin cjs', () => {
+    it('creates bin cjs with single bin file', () => {
+      const config = createConfig(
+        'foo.ts',
+        {
+          bin: 'dist/bin.js',
+        },
+        'node',
+        testFolder,
+      );
+      expect(config.length).toBe(2);
+
+      expect(config[1].input).toEqual('bin.ts');
+      expect(config[1].output).toMatchObject({
+        file: 'dist/bin.js',
+        format: 'cjs',
+        sourcemap: true,
+      });
+    });
+  });
+  it('creates bin cjs with more bin files', () => {
+    const config = createConfig(
+      'foo.ts',
+      {
+        bin: {
+          bin1: 'dist/bin1.js',
+          bin2: 'dist/bin2.js',
+        },
+      },
+      'node',
+      testFolder,
+    );
+    expect(config.length).toBe(3);
+
+    expect(config[1].input).toEqual('bin1.ts');
+    expect(config[1].output).toMatchObject({
+      file: 'dist/bin1.js',
+      format: 'cjs',
+      sourcemap: true,
+    });
+
+    expect(config[2].input).toEqual('bin2.ts');
+    expect(config[2].output).toMatchObject({
+      file: 'dist/bin2.js',
+      format: 'cjs',
+      sourcemap: true,
     });
   });
 });

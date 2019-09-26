@@ -7,7 +7,7 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverageFrom: ['src/**/*.{(j|t)s,(j|t)sx}'],
-  coveragePathIgnorePatterns: ['/node_modules/', '/__MOCK__/'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/__mocks__/', '/__fixtures__/'],
   coverageThreshold: {
     global: {
       branches: 0,

@@ -1,8 +1,15 @@
 import path from 'path';
-import getFiles from '.';
+import getFiles, { getFilenameWithNewExtension } from '.';
 
-const testFolder = path.resolve(__dirname, '..', '__MOCK__');
-describe('files', () => {
+const testFolder = path.resolve(__dirname, '../../../../__fixtures__/files');
+
+describe('getFilenameWithNewExtension', () => {
+  it('returns file with new extension', () => {
+    expect(getFilenameWithNewExtension('foo.bar.ext', 'newext')).toBe('foo.bar.newext');
+  });
+});
+
+describe('getFiles', () => {
   it('returns input file with type', () => {
     expect(getFiles('foo.ts', false, 'node', testFolder).input).toBe('foo.node.ts');
   });

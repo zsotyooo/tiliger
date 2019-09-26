@@ -1,6 +1,7 @@
+import path from 'path';
 import { RollupWatchOptions, OutputOptions } from 'rollup';
 import { defaults } from 'underscore';
-import getFiles from '../files';
+import getFiles, { getFilenameWithNewExtension } from '../files';
 import createPluginService from '../plugin';
 
 export type EnvironmentType = 'node' | 'browser' | 'both';
@@ -69,6 +70,29 @@ function createBuilds(
       output: { file: nodeFiles.output, format: 'cjs', sourcemap: true },
       plugins: plugins.getEs5BuildPlugins(),
       external: externalFilter,
+    });
+  }
+
+  if (pkg.bin) {
+    let bins: string[] = [];
+    if (typeof pkg.bin === 'string') {
+      bins.push(pkg.bin);
+    } else {
+      bins = Object.values(pkg.bin as { [index: string]: string });
+    }
+    bins.forEach(outputFile => {
+      const binFiles = getFiles(
+        path.basename(getFilenameWithNewExtension(outputFile, 'ts')),
+        outputFile,
+        'node',
+        projectFolder,
+      );
+      builds.push({
+        input: binFiles.input,
+        output: { file: binFiles.output, format: 'cjs', sourcemap: true },
+        plugins: plugins.getEs5BuildPlugins(),
+        external: externalFilter,
+      });
     });
   }
 
